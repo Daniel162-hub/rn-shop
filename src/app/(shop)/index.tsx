@@ -8,10 +8,9 @@ import { ListHeader } from '../../components/list-header'
 const Home = () => {
   return (
     <View>
-      <FlatList data={PRODUCTS} 
-      renderItem={({item}) => (
-        <ProductListItem product={item}/>
-        )} 
+      <FlatList 
+      data={PRODUCTS} 
+      renderItem={({item}) => <ProductListItem product={item}/>} 
       keyExtractor={item => item.id.toString()}
       numColumns={2}
       ListHeaderComponent={ListHeader}
